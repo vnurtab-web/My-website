@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bright English — Репетитор английского</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Pacifico&display=swap" rel="stylesheet">
+  <meta name="description" content="Яркий и дружелюбный репетитор английского — индивидуальные и групповые занятия, подготовка к экзаменам и разговорная практика." />
+  <style>
+    :root{
+      --bg1: linear-gradient(135deg,#ffecd2 0%,#fcb69f 50%,#ff7eb3 100%);
+      --accent: #ff3d81;
+      --accent-2: #00d4ff;
+      --glass: rgba(255,255,255,0.12);
+      --card: rgba(255,255,255,0.9);
+      --text-dark: #161616;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial; margin:0; background:var(--bg1); color:var(--text-dark); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale}
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .mark{font-family:Pacifico, cursive;font-size:28px;color:white;text-shadow:0 3px 10px rgba(0,0,0,0.12)}
+    .nav{display:flex;gap:12px;align-items:center}
+    .btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:10px 16px;border-radius:14px;border:0;font-weight:700;cursor:pointer;box-shadow:0 8px 24px rgba(0,0,0,0.12)}
+    .btn.ghost{background:transparent;border:2px solid rgba(255,255,255,0.18);backdrop-filter:blur(6px);color:white}
+
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:48px 0}
+    .hero-card{background:var(--card);border-radius:18px;padding:28px;box-shadow:0 10px 40px rgba(0,0,0,0.12)}
+    h1{margin:0;font-size:44px;line-height:1.02}
+    p.lead{margin-top:12px;color:#333;font-size:18px}
+
+    .features{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .feature{background:var(--glass);padding:10px 12px;border-radius:12px;color:#fff;font-weight:600;backdrop-filter:blur(6px)}
+
+    /* Pricing / packages */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .card{background:rgba(255,255,255,0.95);padding:18px;border-radius:14px;text-align:center}
+    .price{font-size:28px;font-weight:800;margin:8px 0}
+    .ctas{display:flex;gap:8px;justify-content:center;margin-top:12px}
+
+    /* Testimonials */
+    .testimonials{margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .t{background:rgba(255,255,255,0.95);padding:16px;border-radius:12px}
+
+    footer{margin-top:36px;padding:18px;border-radius:12px;background:rgba(255,255,255,0.08);display:flex;justify-content:space-between;align-items:center}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .testimonials{grid-template-columns:1fr}
+      header{flex-direction:column;align-items:flex-start}
+    }
+
+    /* playful accents */
+    .splash{position:relative}
+    .bubble{position:absolute;border-radius:50%;filter:blur(30px);opacity:0.8}
+    .b1{width:120px;height:120px;right:-30px;top:-40px;background:rgba(255,255,255,0.18)}
+    .b2{width:200px;height:200px;left:-50px;bottom:-60px;background:rgba(0,0,0,0.06)}
+
+    .pulse{animation:pulse 3s ease-in-out infinite}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.06)}100%{transform:scale(1)}}
+
+    /* small utilities */
+    .muted{color:#666;font-size:14px}
+    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,#fff0 0%,#ffffff11 100%);font-weight:700}
+
+    /* contact form */
+    form{display:grid;gap:10px}
+    input, textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #eee;font-size:15px}
+    label{font-weight:600}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <div style="width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,#fff,#ffd6e8);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,0.08)">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18M3 12h12M3 18h18" stroke="#ff3d81" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div>
+          <div class="mark">Bright English</div>
+          <div class="muted">репетитор — разговор, экзамены, уверенность</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <button class="btn ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Записаться</button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <div class="hero-card">
+            <h1>Учитесь говорить по‑английски с радостью ✨</h1>
+            <p class="lead">Я — опытный репетитор английского. Индивидуальные планы, живые разговоры, подготовка к IELTS/TOEFL и школа уверенности. Доступно онлайн и офлайн.</p>
+
+            <div class="features">
+              <div class="feature">Разговорная практика</div>
+              <div class="feature">Подготовка к экзаменам</div>
+              <div class="feature">Детям и взрослым</div>
+            </div>
+
+            <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+              <button class="btn" onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">Посмотреть пакеты</button>
+              <button class="btn ghost" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Бесплатная консультация</button>
+            </div>
+
+            <div style="margin-top:14px;color:#444;font-size:14px">🔥 Специальное предложение: первый урок — 50%.</div>
+          </div>
+
+          <div class="testimonials">
+            <div class="t">
+              <strong>Анна, B2 → C1</strong>
+              <p class="muted">"Через 6 месяцев — уверенная речь и +7 баллов в экзамене. Прекрасный подход!"</p>
+            </div>
+            <div class="t">
+              <strong>Игорь, подготовка к интервью</strong>
+              <p class="muted">"Помогли подготовиться к собеседованию: спокойствие и результат — предложение о работе!"</p>
+            </div>
+          </div>
+
+        </div>
+
+        <aside>
+          <div style="position:relative">
+            <div class="hero-card" style="text-align:center">
+              <div style="font-size:14px;color:#666">Преподаватель</div>
+              <div style="display:flex;gap:12px;align-items:center;justify-content:center;margin-top:12px">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="photo" style="width:86px;height:86px;border-radius:14px;object-fit:cover;box-shadow:0 6px 20px rgba(0,0,0,0.08)">
+                <div style="text-align:left">
+                  <div style="font-weight:800">Мария Иванова</div>
+                  <div class="muted">10+ лет опыта • CELTA</div>
+                </div>
+              </div>
+
+              <div style="margin-top:16px;text-align:left">
+                <div class="pill">Фокус: разговорная уверенность</div>
+                <div style="margin-top:10px" class="muted">Занятия от 45 минут. Индивидуальные материалы и домашние задания.</div>
+              </div>
+
+              <div style="margin-top:18px" class="ctas">
+                <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Записаться</button>
+                <a class="btn ghost" href="mailto:teacher@example.com">Написать</a>
+              </div>
+
+              <div style="margin-top:12px;font-size:13px;color:#777">Цена от <strong>€18</strong> / 45 минут</div>
+            </div>
+          </div>
+        </aside>
+
+      </section>
+
+      <section id="packages">
+        <h2 style="margin-top:8px">Пакеты занятий</h2>
+        <div class="cards">
+          <div class="card">
+            <div style="font-weight:800">Разговорный</div>
+            <div class="muted">Еженедельные разговорные уроки</div>
+            <div class="price">€18 / 45 мин</div>
+            <div class="ctas"><button class="btn">Выбрать</button></div>
+          </div>
+          <div class="card">
+            <div style="font-weight:800">Экзаменационный</div>
+            <div class="muted">План для IELTS/TOEFL</div>
+            <div class="price">€28 / 60 мин</div>
+            <div class="ctas"><button class="btn">Выбрать</button></div>
+          </div>
+          <div class="card">
+            <div style="font-weight:800">Интенсив</div>
+            <div class="muted">Интенсивный курс 8 недель</div>
+            <div class="price">€320 / курс</div>
+            <div class="ctas"><button class="btn">Выбрать</button></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:22px">
+        <h2>Контакты & запись</h2>
+        <div style="display:grid;grid-template-columns:1fr 360px;gap:18px;margin-top:12px">
+          <div class="hero-card">
+            <form onsubmit="event.preventDefault(); alert('Спасибо! Я свяжусь с вами в ближайшее время. (здесь можно подключить реальную отправку)')">
+              <label for="name">Имя</label>
+              <input id="name" placeholder="Ваше имя" required>
+              <label for="email">Email или телефон</label>
+              <input id="email" placeholder="email@example.com или +49 123 4567" required>
+              <label for="message">Кратко о цели</label>
+              <textarea id="message" rows="4" placeholder="Например: подготовка к IELTS, разговорная практика"></textarea>
+              <div style="display:flex;gap:8px;margin-top:10px">
+                <button class="btn" type="submit">Отправить</button>
+                <button class="btn ghost" type="button" onclick="window.location.href='mailto:teacher@example.com'">Написать напрямую</button>
+              </div>
+            </form>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:10px;align-items:flex-start">
+            <div class="hero-card" style="width:100%">
+              <div style="font-weight:800">Как проходят занятия</div>
+              <p class="muted" style="margin-top:6px">Онлайн через Zoom / Google Meet. Возможна запись урока. Материалы в Google Docs и персональные планы.</p>
+              <ul class="muted" style="margin-top:6px">
+                <li>Гибкий график</li>
+                <li>Индивидуальная обратная связь</li>
+                <li>Промежуточная оценка прогресса</li>
+              </ul>
+            </div>
+
+            <div class="hero-card" style="width:100%">
+              <div style="font-weight:800">Социальные</div>
+              <div style="margin-top:8px;display:flex;gap:8px">
+                <a aria-label="telegram" href="#" class="muted">Telegram</a>
+                <a aria-label="instagram" href="#" class="muted">Instagram</a>
+                <a aria-label="vk" href="#" class="muted">VK</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© <strong>Bright English</strong> — Мария Иванова</div>
+      <div class="muted">Email: teacher@example.com • +49 123 4567</div>
+    </footer>
+  </div>
+
+  <div class="splash">
+    <div class="bubble b1 pulse"></div>
+    <div class="bubble b2"></div>
+  </div>
+
+</body>
+</html>
